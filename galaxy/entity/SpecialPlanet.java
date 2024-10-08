@@ -6,7 +6,6 @@ public class SpecialPlanet extends Planet{
     private String  life;
     private  String resource;
 
-
     public SpecialPlanet(String name, String nameGalaxy, TypePlanet typePlanet, int numMoon, String distanceSun, String life, String resource) {
         super(name, nameGalaxy, typePlanet, numMoon, distanceSun);
         this.life  = life;

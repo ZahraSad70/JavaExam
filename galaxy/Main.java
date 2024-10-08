@@ -22,7 +22,6 @@ public class Main {
 
         getPlanetFile(scanner,galaxy);
 
-
         while(true){
             System.out.println(menu);
             String input=scanner.nextLine();

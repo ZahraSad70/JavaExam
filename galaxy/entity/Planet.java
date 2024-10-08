@@ -7,9 +7,6 @@ public abstract class Planet{
     private int numMoon;
     private String  distanceSun;
 
-
-
-
     public Planet(String name, String nameGalaxy, TypePlanet typePlanet, int numMoon, String distanceSun) {
         this.name = name;
         this.nameGalaxy = nameGalaxy;
