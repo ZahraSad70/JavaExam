@@ -52,32 +52,36 @@ public class Main {
 
 
                 case "3":
-                    System.out.println("Select Planet :\n");
-                    for (SpecialPlanet p:galaxy.getSpecialPlanets()){
-                        System.out.println(p.getName());
-                    }
-
-                    String namePlanet=scanner.nextLine().toLowerCase();
-                    System.out.println("enter num moon");
-                    String numMoon=scanner.nextLine();
-
-                    for (SpecialPlanet p:galaxy.getSpecialPlanets()){
-                        if (p.getName().toLowerCase().trim().equals(namePlanet)){
-                            p.setNumMoon(Integer.parseInt(numMoon));
-                            p.setName(p.getName());
-                            p.setDistanceSun(p.getDistanceSun());
-                            p.setNameGalaxy(p.getNameGalaxy());
-                            p.setTypePlanet(p.getTypePlanet());
-                            p.setResource(p.getResource());
-                            p.setLife(p.getLife());
-
-                            break;
-                        }
-                    }
+                    changeMoon(galaxy, scanner);
                     exportFilePlanet(galaxy);
 
                 case "4":
                 case "5":
+            }
+        }
+    }
+
+    private static void changeMoon(Galaxy galaxy, Scanner scanner) {
+        System.out.println("Select Planet :\n");
+        for (SpecialPlanet p: galaxy.getSpecialPlanets()){
+            System.out.println(p.getName());
+        }
+
+        String namePlanet= scanner.nextLine().toLowerCase();
+        System.out.println("enter num moon");
+        String numMoon= scanner.nextLine();
+
+        for (SpecialPlanet p: galaxy.getSpecialPlanets()){
+            if (p.getName().toLowerCase().trim().equals(namePlanet)){
+                p.setNumMoon(Integer.parseInt(numMoon));
+                p.setName(p.getName());
+                p.setDistanceSun(p.getDistanceSun());
+                p.setNameGalaxy(p.getNameGalaxy());
+                p.setTypePlanet(p.getTypePlanet());
+                p.setResource(p.getResource());
+                p.setLife(p.getLife());
+
+                break;
             }
         }
     }
